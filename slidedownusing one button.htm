@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Slide Toggle</title>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script> 
+var count=0
+$(document).ready(function(){
+    $(".tog").click(function(){
+	count++;
+	if(count%2==1){
+    $(".divClass").slideDown(1000);
+    }else{
+    $(".divClass").stop();
+  }
+  });
+});
+ 
+</script>
+ 
+<style> 
+.divClass
+{
+    padding:10px;
+    background-color:green;
+    border:solid 1px;
+    height:300px;
+    width: 600px;
+    display:none;
+}.
+
+</style>
+</head>
+<body>
+
+<button type="button" Class="tog">slide</button>
+<hr>
+<div class="divClass"><br><b></b> <br><br></div>
+
+
+</body>
+</html>
