@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>buttons</title>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	var count=0;
+	var count1=0;
+	var count2=0;
+		$(document).ready(function(){
+		$(".but1").on("click",function(e){
+			count++;
+			if(count%2==1)
+				$(".object").css("background-color","red");
+			else
+				$(".object").css("background-color","green");
+		});
+	});
+		$(document).ready(function(){
+		$(".but2").on("click",function(e){
+			count1++;
+			if(count1%2==1)
+				$(".object").css("border-radius","+30px");
+			else
+				$(".object").css("border-radius","+0px");
+		});
+	});
+	function addNewbox()
+	{
+		$("#container").wrapInner("<div style=' background-colour: red; margin-left:450px; width:400px; height:500px;position:absolute;'></div>");
+		return;
+	}
+
+</script>
+<style>
+	.object{
+		left: 0px;
+		top:150px;
+		position: absolute;
+		height: 175px;
+		width: 175px;
+		background-color: green;
+		border-radius: 0px;
+	}.
+</style>
+</head>
+
+<body>
+	<button type="button" Class="but1">toggle colors</button>
+	<button type="button" Class="but2">toggle rounded borders</button>
+	<button type="button" Class="but3" onclick= addNewbox(); >add a new box</button>
+	<div id="container" class="object"><br></div>
+</body>
+</html>
