@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title> the watertank animation</title>
+    </head>
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+    
+    var count=0;
+    $("#flow").hide();
+        $(document).ready(function(){
+             
+            $("#tap").click(function()
+            { count++;
+              if(count%2==0)
+              {
+                  $("#tap").css("background","red");
+                  $("#flow").css("opacity","0%");
+                  $("#tank1").stop();
+                  
+                  
+                }
+              else
+              {
+                  $("#tap").css("background"," green");
+                 $("#flow").css("opacity","100%");
+                 $("#tank1").slideDown(8000);
+                 
+              }
+             
+            });
+        });
+</script>
+<style>
+    #tank1
+    {
+        position:absolute;
+        left:0px;
+        top:0px;
+        height:300px;
+        width:200px;
+        background:#ffffff;
+        
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;
+        display: none;
+      
+        
+    }
+    #water
+    {
+        position:absolute;
+        left:150px;
+        top:130px;
+        height:300px;
+        width:200px;
+        background:#a5d9ec;
+        border:5px solid #000000;
+        border-top-left-radius:15px;
+        border-top-right-radius:15px;
+       
+        
+    }
+    #pipe1
+    {
+        position:absolute;
+        left:355px;
+        top:430px;
+        background:#423e41;
+        width:150px;
+        height:15px;
+    }
+    #pipe2
+    {
+        position:absolute;
+        left:505px;
+        top:420px;
+        height:75px;
+        width:15px;
+        background:#423e41;
+    }
+    #tap
+    {
+        position:absolute;
+        left:497px;
+        top:403px;
+        height:7px;
+        width:30px;
+        padding:5px;
+        background:red;
+    }
+    #flow
+    {
+        position:absolute;
+        top:495px;
+        left:508px;
+        height:100px;
+        width:7px;
+        background:#a5d9ec;
+        opacity: 0%;
+        
+    }
+</style>
+<body>
+    
+    
+ 
+ <div id="water">
+     <div id="tank1"> </div>
+     </div>
+ 
+   
+    <div id="tap" > </div>
+    <div id="pipe1"></div>
+    <div id="pipe2"></div>
+    <div id="flow" ></div>
+   
+   
+    
+</body>
+</head>
+
+
+
