@@ -1,0 +1,187 @@
+<html>
+    <title>
+        three tank animation
+    </title>
+    
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0-beta.1/jquery-ui.js"></script>
+<script>
+var count1=0,count2=0,count3=0;
+    $(document).ready(function(){
+       $("#water1").click(function()
+       {count1++;
+        if(count1%2==1)
+        {
+            
+            $("#maintank").animate({'background-color': 'red'},5000);
+            $("#tank1").slideDown(10000);
+            $("#mainwater").slideUp(15000);
+            
+            
+        }
+        else
+        {   $("#maintank").stop();
+             $("#tank1").stop();
+             $("#mainwater").stop();
+        }
+           
+       });
+    });
+    
+    $(document).ready(function(){
+       $("#water2").click(function()
+       {count2++;
+        if(count2%2==1)
+        {
+             $("#maintank").animate({'background-color': 'yellow'},5000);
+            $("#tank2").slideDown(10000);
+            $("#mainwater").slideUp(15000);
+        }
+        else
+        {
+            $("#maintank").stop();
+             $("#tank2").stop();
+             $("#mainwater").stop();
+        }
+           
+       });
+    });
+    
+    $(document).ready(function(){
+       $("#water3").click(function()
+       {count3++;
+        if(count3%2==1)
+        {
+            
+            $("#maintank").animate({'background-color': '#fffff'},5000);
+            $("#tank3").slideDown(10000);
+            $("#mainwater").slideUp(15000);
+
+        }
+        else
+        {
+            $("#maintank").stop();
+             $("#tank3").stop();
+             $("#mainwater").stop();
+        }
+           
+       });
+    });
+</script>
+<style>
+    #tank1
+    {
+        position:absolute;
+        left:0px;
+        top:0px;
+        height:300px;
+        width:200px;
+        background:#ffffff;
+        border:0px solid #000000;
+       display:none;
+      
+        
+    }
+     #tank2
+    {
+        position:absolute;
+        left:0px;
+        top:0px;
+        height:300px;
+        width:200px;
+        background:#ffffff;
+        border:0px solid #000000;
+       display:none;
+      
+        
+    }
+     #tank3
+    {
+        position:absolute;
+        left:0px;
+        top:0px;
+        height:300px;
+        width:200px;
+        background:#ffffff;
+        border:0px solid #000000;
+       display:none;
+      
+        
+    }
+    #water1
+    {
+        position:absolute;
+        left:50px;
+        top:50px;
+        height:300px;
+        width:200px;
+        background:red;
+        border:5px solid #000000;
+        border-top:0px;
+       
+        
+    }#water2
+    {
+        position:absolute;
+        left:500px;
+        top:50px;
+        height:300px;
+        width:200px;
+        background:green;
+        border:5px solid #000000;
+        border-top:0px;
+       
+       
+        
+    }#water3
+    {
+        position:absolute;
+        left:1000px;
+        top:50px;
+        height:300px;
+        width:200px;
+        background:blue;
+        border:5px solid #000000;
+        
+       border-top:0px;
+        
+    }
+    #mainwater{
+        position:absolute;
+        top:-3px;
+        left:0px;
+        height:200px;
+        width:1300px;
+        background:white;
+        border-top:0px;
+        
+        
+    }
+    #maintank{
+        position:absolute;
+        top:450px;
+        left:20px;
+        height:200px;
+        width:1300px;
+        background:red;
+        border:3px solid black;
+        border-top:0px;
+       
+        
+    }
+    #tap1{
+        position: absolute;
+        background-image: url('tap.png');
+        
+        
+
+    }
+</style>
+<body>
+    <div id="water1"><div id="tank1"></div></div>
+    <div id="tap1"></div>
+    <div id="water2"><div id="tank2"></div></div>
+    <div id="water3"><div id="tank3"></div></div>
+    <div id="maintank"><div id="mainwater"></div></div>
+</body>
+</html>
